@@ -7,6 +7,13 @@
 - **기술**: `fetch`와 `XMLHttpRequest`를 Override해서 특정 URL 차단
 - **설치 RAW**: https://github.com/isnoa/memic-advanced/raw/refs/heads/main/memic_ads_request_block.user.js
 
+<img width="622" height="219" alt="image" src="https://github.com/user-attachments/assets/a55c5925-3e28-4585-9032-435c7761c190" />
+
+``
+↑ 대체 무슨 기능인지..
+``
+---
+
 ### 2. 미밐 게시글 자동새로고침
 - **기능**: 5초 간격으로 자동 새로고침을 수행하며, 상태를 저장하여 페이지 재방문 시에도 설정이 유지됩니다.
 - **주요 특징**:
@@ -16,6 +23,10 @@
   - 사용자 설정 저장 (`GM_setValue`/`GM_getValue` 사용)
 - **UI**: 헤더에 토글 버튼이 추가되며, 활성화 상태에 따라 아이콘 색상 변경
 - **설치 RAW**: https://github.com/isnoa/memic-advanced/raw/refs/heads/main/memic_article_autorefresh.user.js
+
+<img width="169" height="77" alt="image" src="https://github.com/user-attachments/assets/2d722030-fff0-4b1a-a149-9c1aa588dc65" />
+<img width="140" height="76" alt="image" src="https://github.com/user-attachments/assets/377740f7-ab7c-4548-9f02-bd26c75c9340" />
+
 
 ---
 
