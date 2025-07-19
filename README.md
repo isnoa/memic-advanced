@@ -21,7 +21,7 @@
 
 ## 🛠 설치 방법
 1. Tampermonkey 확장 프로그램 설치 ([Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) / [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/))
-2. 원하는 스크립트의 "설치 RAW" 링크를 열어 자동 설치
+2. 원하는 스크립트의 "설치 RAW" 링크를 열어 설치
 
 ---
 
