@@ -58,6 +58,9 @@
     function extractThumbnailUrl(content) {
         if (!content) return null;
 
+        const videoMatch = content.match(/<video[^>]+poster="([^"]+)"/i);
+        if (videoMatch?.[1]) return videoMatch[1];
+
         const imgMatch = content.match(/<img[^>]+src="([^"]+)"/i);
         if (imgMatch?.[1]) return imgMatch[1];
 
@@ -67,7 +70,7 @@
                 const mediaList = JSON.parse(carouselMatch[1]);
                 if (mediaList?.[0]?.url) return mediaList[0].url;
             } catch (e) {
-                console.warn("JSON 파싱 실패:", e);
+                console.log("썸네일을 불러올 수 없습니다.", e);
             }
         }
 
@@ -121,7 +124,7 @@
         if (!href) return;
 
         const id = href.split("/").pop();
-        const thumb = item.querySelector(".ri-image-2-fill");
+        const thumb = item.querySelector(".ri-image-2-fill, .ri-video-chat-fill");
         if (!thumb) return;
 
         try {
@@ -136,7 +139,7 @@
                     },
                 });
 
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                if (!response.ok) return;
 
                 const data = await response.json();
                 thumbnailUrl = extractThumbnailUrl(data.content);
@@ -168,7 +171,7 @@
                 }
             });
         } catch (error) {
-            console.error(`썸네일 로드 실패 (ID: ${id}):`, error);
+            console.log(`썸네일 로드에 실패하였습니다. ${id}`, error);
         }
     }
 
